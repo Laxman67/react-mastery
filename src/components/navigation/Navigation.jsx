@@ -1,4 +1,3 @@
-import React from 'react';
 import { Link, Outlet } from 'react-router-dom';
 import crown from '../../assets/crown.svg';
 import './navigation.styles.scss';
@@ -14,7 +13,7 @@ const Navigation = () => {
           <Link to="/shop" className="nav-link">
             SHOP
           </Link>
-          <Link to="/sign-in" className="nav-link">
+          <Link to="/auth" className="nav-link">
             SIGN IN
           </Link>
         </div>
