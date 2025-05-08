@@ -4,10 +4,14 @@ const CategoryItem = ({ category }) => {
   const { imageUrl, title } = category;
   return (
     <>
-      <div className="category-container">
+      <div className="directory-item-container">
         {/* src={imageUrl} alt={title} */}
-        <img className="background-image" src={imageUrl} alt={title} />
-        <div className="category-body-container">
+        <img
+          className="directory-background-image"
+          src={imageUrl}
+          alt={title}
+        />
+        <div className="category-item-body-container">
           <h2>{title}</h2>
           <p>Shop Now</p>
         </div>

@@ -1,23 +1,31 @@
 .cart-item-container {
   width: 100%;
   display: flex;
-  height: 80px;
-  margin-bottom: 15px;
+  padding: 10px 0;
+  border-bottom: 1px solid #eaeaea;
 
   img {
-    width: 30%;
+    width: 70px;
+    height: 70px;
+    object-fit: cover;
+    border-radius: 6px;
+    margin-right: 12px;
   }
 
   .item-details {
-    width: 70%;
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
     justify-content: center;
-    padding: 10px 20px;
 
     .name {
-      font-size: 16px;
+      font-size: 14px;
+      font-weight: 600;
+      margin-bottom: 4px;
+    }
+
+    .price {
+      font-size: 13px;
+      color: #555;
     }
   }
 }

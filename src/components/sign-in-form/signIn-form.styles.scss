@@ -1,12 +1,31 @@
 .sign-in-container {
   display: flex;
   flex-direction: column;
-  width: 380px;
+  width: 320px;
+
   h2 {
-    margin: 10px 0;
+    margin-bottom: 2px;
+    font-size: 18px;
   }
+
+  span {
+    margin-bottom: 6px;
+    font-size: 13px;
+    color: #666;
+  }
+
+  form {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+  }
+
   .buttons-container {
     display: flex;
-    justify-content: space-between;
+    gap: 10px;
+
+    button {
+      flex: 1;
+    }
   }
 }

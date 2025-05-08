@@ -1,8 +1,27 @@
 .sign-up-container {
   display: flex;
   flex-direction: column;
-  width: 380px;
+  width: 320px;
+
   h2 {
-    margin: 10px 0;
+    margin-bottom: 2px;
+    font-size: 18px;
+  }
+
+  span {
+    margin-bottom: 12px;
+    font-size: 13px;
+    color: #666;
+  }
+
+  form {
+    display: flex;
+    flex-direction: column;
+    gap: 5px; // Slightly reduced vertical gap between fields
+
+    input {
+      padding: 2px 4px; // 🔽 Compact padding inside the input field
+      font-size: 14px;
+    }
   }
 }

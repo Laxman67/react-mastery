@@ -5,7 +5,7 @@ import App from './App.jsx';
 import { UserProvider } from './context/userContext.jsx';
 import { BrowserRouter as Router } from 'react-router-dom';
 import { Wrapper } from './__previewjs__/Wrapper.jsx';
-import ProductsProvider from './context/productsContext.jsx';
+import CategoriesProvider from './context/categoriesContext.jsx';
 import { CartProvider } from './context/cartContext.jsx';
 
 createRoot(document.getElementById('root')).render(
@@ -13,11 +13,11 @@ createRoot(document.getElementById('root')).render(
     <Router>
       <Wrapper>
         <UserProvider>
-          <ProductsProvider>
+          <CategoriesProvider>
             <CartProvider>
               <App />
             </CartProvider>
-          </ProductsProvider>
+          </CategoriesProvider>
         </UserProvider>
       </Wrapper>
     </Router>
