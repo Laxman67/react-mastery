@@ -5,7 +5,7 @@ import {
 } from '../../utils/firebase.utils';
 import FormInput from '../formInput/FormInput';
 import './signUp-form.styles.scss';
-import Button from '../button/Button';
+import Button, { BUTTON_TYPE_CLASSES } from '../button/Button';
 
 const defaultFormFields = {
   displayName: '',
@@ -87,7 +87,7 @@ const SignUp = () => {
           name="confirmPassword"
           value={confirmPassword}
         />
-        <Button buttonType="">Sign Up</Button>
+        <Button buttonType={BUTTON_TYPE_CLASSES.base}>Sign Up</Button>
       </form>
     </div>
   );
