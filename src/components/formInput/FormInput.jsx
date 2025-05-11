@@ -1,5 +1,5 @@
 import React from 'react';
-import { GroupContainer, FormInputLabel } from './formInput.styles';
+import { GroupContainer, FormInputLabel } from './forminput.styles.jsx';
 
 const FormInput = ({ label, ...otherProps }) => {
   return (
