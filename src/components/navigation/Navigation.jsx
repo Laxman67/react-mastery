@@ -4,8 +4,8 @@ import { UserContext } from '../../context/userContext';
 import { useContext } from 'react';
 import { signOutUser } from '../../utils/firebase.utils';
 import CartIcon from '../carIcon/CardIcon';
-import CartDropdown from '../cart-dropdown/CartDropDown';
 import { CartContext } from '../../context/cartContext';
+import CartDropdown from '../cart-dropdown/CartDropdown';
 // Styled Components
 
 import {
