@@ -1,14 +1,14 @@
 import React from 'react';
 import {
   GroupContainer,
-  FormInput as StyledInput,
+  FormInputField,
   FormInputLabel,
-} from './Forminput.styles';
+} from './FormInput.styles';
 
 const FormInput = ({ label, ...otherProps }) => {
   return (
     <GroupContainer>
-      <StyledInput {...otherProps} />
+      <FormInputField {...otherProps} />
       {label && (
         <FormInputLabel shrink={otherProps.value?.length}>
           {label}
