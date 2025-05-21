@@ -7,9 +7,12 @@ import { BrowserRouter as Router } from 'react-router-dom';
 import { Wrapper } from './__previewjs__/Wrapper.jsx';
 import CategoriesProvider from './context/categoriesContext.jsx';
 import { CartProvider } from './context/cartContext.jsx';
+// Store and Provider
+import { Provider } from 'react-redux';
+import { store } from './store/store.js';
 
 createRoot(document.getElementById('root')).render(
-  <>
+  <Provider store={store}>
     <Router>
       <Wrapper>
         <UserProvider>
@@ -21,5 +24,5 @@ createRoot(document.getElementById('root')).render(
         </UserProvider>
       </Wrapper>
     </Router>
-  </>
+  </Provider>
 );
