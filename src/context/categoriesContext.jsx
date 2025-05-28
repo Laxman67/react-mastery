@@ -16,6 +16,7 @@ const CategoriesProvider = ({ children }) => {
     getCategoriesMap();
   });
   const value = { categoriesMap, setCategoriesMap };
+
   return (
     <CategoriesContext.Provider value={value}>
       {children}
