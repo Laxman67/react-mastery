@@ -1,12 +1,14 @@
 import { useParams } from 'react-router-dom';
-import { CategoriesContext } from '../../context/categoriesContext';
-import { useContext, useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import ProductCard from '../productCard/ProductCard';
 import './category.styles.scss';
+import { useSelector } from 'react-redux';
+import { selectCategoriesMap } from '../../store/Categories/CategorySelector';
 
 const Category = () => {
   const { category } = useParams();
-  const { categoriesMap } = useContext(CategoriesContext);
+  const categoriesMap = useSelector(selectCategoriesMap);
+
   const [products, setProducts] = useState(categoriesMap[category]);
 
   //  TODO ---  console.log('Redering');
