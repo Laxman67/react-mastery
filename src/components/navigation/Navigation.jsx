@@ -1,9 +1,7 @@
 import { Outlet } from 'react-router-dom';
 import crown from '../../assets/crown.svg';
-import { useContext } from 'react';
 import { signOutUser } from '../../utils/firebase.utils';
 import CartIcon from '../carIcon/CardIcon';
-import { CartContext } from '../../context/cartContext';
 import CartDropdown from '../cart-dropdown/CartDropdown';
 
 // Styled Components
@@ -16,10 +14,11 @@ import {
 } from './navigation.styles';
 import { useSelector } from 'react-redux';
 import { selectCurrentUser } from '../../store/User/UserSelector';
+import { selectIsCartOpen } from '../../store/Cart/CartSelector';
 
 const Navigation = () => {
   const currentUser = useSelector(selectCurrentUser);
-  const { isCartOpen } = useContext(CartContext);
+  const isCartOpen = useSelector(selectIsCartOpen);
   // console.log(currentUser);
 
   return (

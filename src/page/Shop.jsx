@@ -5,13 +5,15 @@ import Category from '../components/Category/Category';
 import { useEffect } from 'react';
 import { getCategoriesAndDocuments } from '../utils/firebase.utils';
 import { useDispatch } from 'react-redux';
-import { setCategoriesMap } from '../store/Categories/CategoryActions';
+import { setCategories } from '../store/Categories/CategoryActions';
 const Shop = () => {
   const dispatch = useDispatch();
   useEffect(() => {
     const getCategoriesMap = async () => {
-      const categoryMap = await getCategoriesAndDocuments();
-      dispatch(setCategoriesMap(categoryMap));
+      const categoriesArray = await getCategoriesAndDocuments('categories');
+      console.log(categoriesArray);
+
+      dispatch(setCategories(categoriesArray));
     };
     getCategoriesMap();
   });
