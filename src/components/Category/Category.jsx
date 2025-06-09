@@ -3,16 +3,18 @@ import { useEffect, useState } from 'react';
 import ProductCard from '../productCard/ProductCard';
 import './category.styles.scss';
 import { useSelector } from 'react-redux';
-import { selectCategoriesMap } from '../../store/Categories/CategorySelector';
+import {
+  selectCategoriesIsLoading,
+  selectCategoriesMap,
+} from '../../store/Categories/CategorySelector';
+import Spinner from '../Spinner/Spinner';
 
 const Category = () => {
   const { category } = useParams();
-  console.log('re-render / category component');
   const categoriesMap = useSelector(selectCategoriesMap);
+  const isLoading = useSelector(selectCategoriesIsLoading);
 
   const [products, setProducts] = useState(categoriesMap[category]);
-
-  //  TODO ---  console.log('Redering');
 
   useEffect(() => {
     console.log('effect fired calling setProducts');
@@ -22,12 +24,16 @@ const Category = () => {
   return (
     <>
       <div className="call-to-cation">{category}</div>
-      <div className="category-container">
-        {products &&
-          products.map((product) => (
-            <ProductCard key={product.id} product={product} />
-          ))}
-      </div>
+      {isLoading ? (
+        <Spinner />
+      ) : (
+        <div className="category-container">
+          {products &&
+            products.map((product) => (
+              <ProductCard key={product.id} product={product} />
+            ))}
+        </div>
+      )}
     </>
   );
 };
