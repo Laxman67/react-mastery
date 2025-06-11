@@ -4,11 +4,12 @@ import CollectionPreview from '../components/collection-preview/CollectionPrevie
 import Category from '../components/Category/Category';
 import { useEffect } from 'react';
 import { useDispatch } from 'react-redux';
-import { fetchCategoriesAsync } from '../store/Categories/CategoryActions';
+import { fetchCategoriesStart } from '../store/Categories/CategoryActions';
+
 const Shop = () => {
   const dispatch = useDispatch();
   useEffect(() => {
-    dispatch(fetchCategoriesAsync());
+    dispatch(fetchCategoriesStart());
   });
 
   return (
